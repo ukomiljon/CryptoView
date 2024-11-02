@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const logger = require('../logger/logger'); // Adjust the path based on your structure
+const logger = require('../utils/logger'); // Adjust the path based on your structure
 
 function connectToDatabase() {
     mongoose

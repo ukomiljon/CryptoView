@@ -2,7 +2,7 @@
 const express = require("express");
 
 const dotenv = require("dotenv");
-const logger = require('./logger/logger');
+const logger = require('./utils/logger');
 
 const process = require("process");
 
