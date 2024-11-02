@@ -10,6 +10,9 @@ This is a simple MERN stack application that displays current prices of cryptocu
 - **Trading Functionality:** Allows users to buy and sell cryptocurrencies.
 - **Secure Authentication:** Uses JWT authentication to protect user accounts.
 - **User Dashboard:** Displays trading history, portfolio, and other relevant information.
+- **NFT:** NFT metadata retrieval and storage.
+- **IPFS:** Decentralized storage (IPFS Integration).
+- **Transaction:** Simple cryptocurrency transaction tracking.
 
 **Getting Started:**
 
