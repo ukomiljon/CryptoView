@@ -69,6 +69,6 @@ const transactionSchema = new mongoose.Schema({
 }, { timestamps: true });  
 
 // Create Mongoose model
-const TransactionModel = mongoose.model("Transaction", transactionSchema);
+const TransactionModel = mongoose.model("TransactionEntity", transactionSchema);
 
 module.exports = { TransactionModel, Transaction };

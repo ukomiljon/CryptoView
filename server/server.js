@@ -9,7 +9,7 @@ const process = require("process");
 const connectToDatabase = require('./config/database');
 const requestLogger = require('./middleware/requestLogger'); 
 const errorHandler = require('./middleware/errorHandler');
-const registerRoutes = require("./routes/registerRoutes");  
+const registerRoutes = require("./routes");  
 const cors = require("cors");
 
 dotenv.config();

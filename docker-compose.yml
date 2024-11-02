@@ -10,7 +10,7 @@ services:
       - 27017:27017
     
     environment:
-      MONGODB_DATABASE: blockchain-app 
+      MONGODB_DATABASE: cryptoview 
       MONGO_INITDB_ROOT_USERNAME: admin
       MONGO_INITDB_ROOT_PASSWORD: admin
      

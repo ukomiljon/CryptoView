@@ -3,7 +3,14 @@ const logger = require('../logger/logger'); // Adjust the path based on your str
 
 function connectToDatabase() {
     mongoose
-        .connect(process.env.MONG_URI)
+        .connect(process.env.MONG_URI,{
+            user: process.env.MONGODB_USERNAME || 'admin', // use default value if needed
+            pass: process.env.MONGODB_PASSWORD || 'admin',
+            authSource: process.env.MONGODB_AUTH_SOURCE || 'admin',
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            ssl: process.env.MONGODB_SSL === 'true',
+        })
         .then(() => { 
             logger.info('Connected to the database');
         })
