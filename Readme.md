@@ -26,6 +26,10 @@ This is a simple MERN stack application that displays current prices of cryptocu
    npm install
    ```
 
+   ```bash
+   docker compose up --build    
+   yarn start:dev
+
 3. **Set up Environment Variables:**
 
    - Create a `.env` file at the root of the project.
