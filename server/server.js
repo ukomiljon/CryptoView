@@ -33,6 +33,7 @@ connectToDatabase();
 // use the request logger middleware
 app.use(requestLogger); 
 
+// Register all routes directly
 registerRoutes(app); 
 
 // error handling middleware
