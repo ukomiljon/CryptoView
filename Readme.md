@@ -28,7 +28,7 @@ This is a simple MERN stack application that displays current prices of cryptocu
 
    ```bash
    docker compose up --build    
-   yarn start:dev
+   npm run dev
 
 3. **Set up Environment Variables:**
 
