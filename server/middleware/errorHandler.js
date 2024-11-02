@@ -20,28 +20,6 @@ const errorHandler = (err, req, res, next) => {
     res.status(statusCode).json({
         error: message,
     });
-
-    // // Customize response based on error type
-    // if (err.name === 'ValidationError') {
-    //     return res.status(400).json({ message: err.message });
-    // }
-
-    // logger.error('Error occurred', {
-    //     message: err.message,
-    //     stack: err.stack,
-    //     path: req.path,
-    //     method: req.method,
-    //     timestamp: new Date().toISOString(),
-    // });
-
-    // // Send a response to the client
-    // res.status(500).json({ message: {
-    //     message: err.message,
-    //     stack: err.stack,
-    //     path: req.path,
-    //     method: req.method,
-    //     timestamp: new Date().toISOString(),
-    // }});
 };
 
 module.exports = errorHandler;

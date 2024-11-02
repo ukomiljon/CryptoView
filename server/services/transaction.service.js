@@ -1,7 +1,6 @@
 const axios = require('axios');
 const { TransactionModel, Transaction } = require('../models/transactionModel'); 
-//const { InternalServerError, ValidationError, UnauthorizedError } = require('./errors'); 
-
+ 
 class TransactionService {
     async save(address) {
         
@@ -38,9 +37,7 @@ class TransactionService {
             await TransactionModel.insertMany(transactions); 
 
             return transactions;
-        } catch (error) {
-            console.log(error);
-            
+        } catch (error) { 
             throw new Error('Error fetching transactions');  
         }
     }

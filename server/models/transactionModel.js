@@ -42,31 +42,13 @@ class Transaction {
 
 // Create Mongoose schema
 const transactionSchema = new mongoose.Schema({
-    address: {
-        type: String,
-        required: true,
-    },
-    hash: {
-        type: String,
-        required: true,
-    },
-    timestamp: {
-        type: Date,
-        required: true,
-    },
-    from: {
-        type: String,
-        required: true,
-    },
-    to: {
-        type: String,
-        required: true,
-    },
-    value: {
-        type: String,
-        required: true,
-    },
-}, { timestamps: true });  
+    address: { type: String, required: true },
+    hash: { type: String, required: true },
+    timestamp: { type: Date, required: true },
+    from: { type: String, required: true },
+    to: { type: String, required: true },
+    value: { type: String, required: true },
+  }, { timestamps: true });
 
 // Create Mongoose model
 const TransactionModel = mongoose.model("TransactionEntity", transactionSchema);

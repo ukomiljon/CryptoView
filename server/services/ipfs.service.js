@@ -10,18 +10,14 @@ class IPFSService {
                     pinata_api_key: process.env.PINATA_API_KEY,
                     pinata_secret_api_key: process.env.PINATA_SECRET_API_KEY,
                 },
-            });
-
-            console.log("response:",response);
+            }); 
             
             // Create and save IPFS data in MongoDB
             const ipfsData = new IPFSModel({
                 hash: response.data.IpfsHash,
                 content: data,
-            });
-
-            console.log("ipfsData:",ipfsData);
-
+            }); 
+          
             return await ipfsData.save();
         } catch (error) {
             throw new Error(error);
