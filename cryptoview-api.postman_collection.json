@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "29c61389-d9cf-4ee3-bb66-39ab13565c1f",
+		"name": "cryptoview-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12391157"
+	},
+	"item": [
+		{
+			"name": "ipfs post data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\": \"komil1122777\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/ipfs/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"ipfs",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ipfs get by hash",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/ipfs/QmTBmfrwPeRNibc23jbKhbEdGhHSfbEGPVgbaqNWtDZe3g",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"ipfs",
+						"QmTBmfrwPeRNibc23jbKhbEdGhHSfbEGPVgbaqNWtDZe3g"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transaction post address",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/transaction/0x960b7a6BCD451c9968473f7bbFd9Be826EFd549A",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"transaction",
+						"0x960b7a6BCD451c9968473f7bbFd9Be826EFd549A"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transaction get address by date",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"address\": \"0x960b7a6BCD451c9968473f7bbFd9Be826EFd549A\",\r\n     \"startDate\": \"2024-10-20\",\r\n     \"endDate\": \"2024-10-24\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/transaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nft get all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/nft/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"nft",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "nft store",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/nft/metadata?contractAddress=0xDC9A986922Fe6a9f92300834d49121CDdb38Da76&tokenId=666",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"nft",
+						"metadata"
+					],
+					"query": [
+						{
+							"key": "contractAddress",
+							"value": "0xDC9A986922Fe6a9f92300834d49121CDdb38Da76"
+						},
+						{
+							"key": "tokenId",
+							"value": "666"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
