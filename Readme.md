@@ -74,7 +74,7 @@ This is a simple MERN stack application that displays current prices of cryptocu
 4. **Start the Server:**
 
    ```bash
-   npm start
+   npm run dev
    ```
 
 5. **Access the Application:**
@@ -106,6 +106,8 @@ crypto-trading-platform/
 - **Frontend:** React, Redux, Axios, Tailwind CSS
 - **Backend:** Node.js, Express, MongoDB, JWT
 - **API:** [Cryptocurrency API](https://example.com/api)
+- **Postman:** use cryptoview-api.postman_collection.json on root folder
+
 
 **Contributing:**
 
