@@ -58,16 +58,14 @@ This is a simple MERN stack application that displays current prices of cryptocu
       PINATA_SECRET_API_KEY='YOUR_PINATA_SECRET_API_KEY'
 
       WEB3_URL='https://mainnet.infura.io/v3/YOUR-API-KEY'
-      ```
 
-      # MONG_URI=mongodb+srv://salceanu:f34mqJgy29B61Mm7@labsdatabase.5913czx.mongodb.net/?retryWrites=true&w=majority&appName=labsdatabase
       MONG_URI='mongodb://host.docker.internal:27017/cryptoview' # if api runs out of docker
       MONGODB_HOST='host.docker.internal' #'mongo-db'
       MONGODB_PORT=27017
       MONGODB_DB='cryptoview'
       MONGODB_USERNAME='admin'
       MONGODB_PASSWORD='admin'
-
+      ```
 
 
 4. **Start the Server:**
