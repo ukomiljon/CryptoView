@@ -1,10 +1,6 @@
 const NFTService = require('../services/nft.service');
 
-class NFTController {
-
-    constructor() {
-        this.service = NFTService;
-    }
+class NFTController { 
 
     async save_get(req, res, next) {
         const { contractAddress, tokenId } = req.query;

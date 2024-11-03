@@ -19,10 +19,8 @@ class TransactionService {
                     sort: 'desc',
                     apikey: process.env.ETHERSCAN_API_KEY,
                 },
-            });
-
-            console.log("response:",response);
-
+            }); 
+            
             const transactions = response.data.result.slice(0, 5).map((tx) => ({
                 address,
                 hash: tx.hash,
@@ -31,9 +29,7 @@ class TransactionService {
                 value: tx.value,
                 timestamp: new Date(parseInt(tx.timeStamp) * 1000),
             }));
-
-            console.log("transactions:",transactions);
-
+ 
             await TransactionModel.insertMany(transactions); 
 
             return transactions;
@@ -54,7 +50,7 @@ class TransactionService {
             if (endDate) filter.timestamp['$lte'] = new Date(endDate);
         }
 
-        return await TransactionEntity.find(filter); // Using Mongoose to find documents
+        return await TransactionModel.find(filter);  
     }
 }
 

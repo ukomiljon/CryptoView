@@ -11,13 +11,13 @@ const requireAuth = require("../middleware/requireAuth");
 const registerRoutes = (app) => {
 
     // Apply requireAuth middleware to all routes
-    app.use(requireAuth);
+    // app.use(requireAuth);
 
     // Register routes
-    app.use(workoutRoutes);
-    app.use(userPortfolio);
-    app.use(transactionsRoutes);
-    app.use(usersRoutes);
+    // app.use(workoutRoutes);
+    // app.use(userPortfolio);
+    // app.use(transactionsRoutes);
+    // app.use(usersRoutes);
     app.use(transaction);
     app.use(ipfs);
     app.use(nft);

@@ -1,12 +1,8 @@
 const TransactionService = require('../services/transaction.service');
 const { TransactionsDto, validateDto } = require('../dtos/transaction.dto');
 
-class TransactionController {
-  
-    constructor() {
-        this.transactionService = TransactionService; 
-    }
-
+class TransactionController { 
+    
     async createTransaction(req, res, next) {
         try { 
             const dto = Object.assign(new TransactionsDto(), req.params);
@@ -22,8 +18,10 @@ class TransactionController {
     }
 
     async getTransactions(req, res, next) {
-        try {
-            const transactions = await  this.transactionService.get(req.query);
+        try {             
+            const dto = Object.assign(new TransactionsDto(), req.body);
+            await validateDto(dto);
+            const transactions = await  TransactionService.get(req.body);
             res.status(200).json(transactions);
         } catch (error) {
             next(error);

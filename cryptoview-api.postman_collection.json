@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"data\": \"komil1122777\"}",
+					"raw": "{\"data\": \"komil112275577\"}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -91,7 +91,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n     \"address\": \"0x960b7a6BCD451c9968473f7bbFd9Be826EFd549A\",\r\n     \"startDate\": \"2024-10-20\",\r\n     \"endDate\": \"2024-10-24\"\r\n}",
+					"raw": "{\r\n     \"address\": \"0x960b7a6BCD451c9968473f7bbFd9Be826EFd549A\",\r\n     \"startDate\": \"2024-11-01\",\r\n     \"endDate\": \"2024-11-02\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -117,16 +117,28 @@
 		{
 			"name": "nft get all",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "yvkecYXotNgjVov5421EmD|2024-10-18T01:29:03.902Z",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/nft/all",
+					"raw": "http://localhost:3000/api/v1/nft/all",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
+						"api",
+						"v1",
 						"nft",
 						"all"
 					]
@@ -152,13 +164,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/nft/metadata?contractAddress=0xDC9A986922Fe6a9f92300834d49121CDdb38Da76&tokenId=666",
+					"raw": "http://localhost:3000/api/v1/nft/metadata?contractAddress=0xDC9A986922Fe6a9f92300834d49121CDdb38Da76&tokenId=666",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
+						"api",
+						"v1",
 						"nft",
 						"metadata"
 					],

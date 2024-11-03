@@ -1,10 +1,6 @@
 const IPFSService = require('../services/ipfs.service');
 
-class IPFSController {
-
-    constructor() {
-        this.service = IPFSService;
-    }
+class IPFSController { 
 
     async save(req, res, next) {
         try {
