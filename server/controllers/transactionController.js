@@ -3,7 +3,7 @@ const { TransactionsDto, validateDto } = require('../dtos/transaction.dto');
 
 class TransactionController { 
     
-    async createTransaction(req, res, next) {
+    async create(req, res, next) {
         try { 
             const dto = Object.assign(new TransactionsDto(), req.params);
             await validateDto(dto);
@@ -17,7 +17,7 @@ class TransactionController {
         }
     }
 
-    async getTransactions(req, res, next) {
+    async get(req, res, next) {
         try {             
             const dto = Object.assign(new TransactionsDto(), req.body);
             await validateDto(dto);

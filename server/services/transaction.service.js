@@ -5,10 +5,7 @@ class TransactionService {
     async save(address) {
         
         try {
-            console.log(address);
-            console.log(process.env.ETHERSCAN_API_URL);
-            console.log(process.env.ETHERSCAN_API_KEY);
-            
+          
             const response = await axios.get(process.env.ETHERSCAN_API_URL, {
                 params: {
                     module: 'account',
